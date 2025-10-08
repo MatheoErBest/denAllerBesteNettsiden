@@ -1,9 +1,48 @@
 body {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    
 }
 
+audio {
+    display: none;
+    
+}
+
+#ja-knapp, #nei-knapp, #tilbake-knapp {
+    font-size: 50px;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#nei-knapp {
+    margin-left: 20px;
+}
+#nei-knapp:hover {
+    background-color: lightcoral;
+}
 
 #ja-knapp {
-    font-size: 50px;;
+    margin-right: 20px;
+}
+#ja-knapp:hover {
+    background-color: lightgreen;
+}
+
+#tilbake-knapp {
+    margin-top: 20px;
+}
+
+#bursdagskake {
+    width: 500px;
+    animation: bursdag 1s ease-out forwards;
+
+}
+
+@keyframes bursdag {
+    0% { padding-top: 150%;}
+    100% { padding-top: 0%;}
 }

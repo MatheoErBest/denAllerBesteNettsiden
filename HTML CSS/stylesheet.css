@@ -1,9 +1,17 @@
-
+.container {
+    align-items: center;
+    border: 5px solid rgb(203, 243, 255);
+    height: 769px;
+    width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 body {
     text-align: center;
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     background-color: lightblue;
+
 }
 
 audio {
@@ -11,7 +19,13 @@ audio {
     
 }
 
-#ja-knapp, #nei-knapp, #tilbake-knapp {
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#knapp{
     background-color: #fffbed;
     font-size: 50px;
     padding: 20px 40px;
@@ -22,36 +36,25 @@ audio {
     margin: 20px;
 }
 
-
-#nei-knapp:hover {
-    background-color: lightcoral;
+#knapp:hover {
+    background-color: greenyellow;
 }
 
-
-#ja-knapp:hover {
-    background-color: lightgreen;
-}
-
-#tilbake-knapp {
-    margin-top: 20px;
-}
-
-#bursdagskake {
-    width: 500px;
-    animation: bursdag 1s ease-out forwards;
-
-}
-
-@keyframes bursdag {
-    0% { padding-top: 150%;}
-    100% { padding-top: 0%;}
+#tekst-box1 {
+    background-color: #fffbed;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px auto;
+    width: 40%;
 }
 
 .pakke {
-    position: relative;
+    position: absolute;
     width: 200px;
     height: 200px;
     margin: 40px auto;
+    top: 50%;
+    left: 43%;
 }
 
 .firkant {
@@ -97,28 +100,51 @@ audio {
 }
 
 .sløyfe {
+    width: 50%;
     mix-blend-mode: multiply;
     position: absolute;
-    top: -55%;
-    left: 30%;
-    transform: translateX(-50%);
+    top: -50%;
+    left: 12%;
+
     
 }
 
-.lokk, .sløyfe, .bånd2 {
-    cursor:pointer
+.ballonger {
+    mix-blend-mode: multiply;
+    width: 100%;
+    height: 200px;
 }
 
-
-.sløyfe:hover{
-    animation: lokk-open 0.5s ease-out ;
+.dancing {
+    mix-blend-mode: multiply;
+    border-radius: 100%;
+    animation: bounce 3s infinite;
 }
 
+.gif {
+    border-radius: 100%;
+}
+.pil {
+    position: absolute;
+    rotate: 180deg;
+    width: 100px;
+    animation: bounce 3s infinite;
+    left: 30%;
+    top: 30%;
 
-@keyframes lokk-open {
-    0% { opacity: 1;}
-    100% { opacity: 0;}
 }
 
+.dancing-text {
+    position: absolute;
+    color: black;
+    top: 30%;
+    left: 5%;
+   
+}
 
+@keyframes bounce {
 
+    0%, 100% {transform: translateX(-5%); }
+    50% { transform: translateX(42%); }
+
+}

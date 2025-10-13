@@ -82,8 +82,7 @@ a {
 .lokk {
     position: absolute;
     top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
+
     width: 100%;
     height: 22%;
     background-color: #ff69b4;
@@ -99,14 +98,15 @@ a {
 }
 
 .pakke-knapp {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 25px;
-  background: #f1a;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s;
+    font-family: 'comic sans ms', cursive, sans-serif;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: #f1a;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
 .pakke-knapp:hover {
@@ -129,15 +129,50 @@ a {
     animation: open-sesamy 0.5s ease-in-out forwards;
 }
 
+#open-pakke:checked ~ .pakke .kake {
+    animation: kake-out 1s 0.5s forwards;
+}
+
 /* Lager en animasjon for pakke når den åpnes */
 @keyframes open-sesamy {
   0% {
-    transform: translateY(0) rotate(0deg);
+    transform: translateY(0);
   }
   50% {
-    transform: translateY(-50px) rotate(10deg);
+    transform: translateY(-40px) rotate(-20deg);
   }
   100% {
     opacity: 0;
   }
+}
+
+@keyframes kake-out {
+    0% {
+        opacity: 0;
+         
+    }
+    50% {
+        opacity: 1;
+        bottom: 50%;
+    }
+    100% {
+        opacity: 1;
+        bottom: 20%;
+        rotate: 1080deg;
+    }
+    
+    
+}
+
+/* Legger til kaken som skal komme ut av pakken */
+.kake {
+
+    position: absolute;
+    bottom: 20%;          
+    left: 50%;            
+    transform: translateX(-50%);
+    width: 70%;
+    opacity: 0;
+    z-index: 5;           /* ligger kaken over pakken */
+    border-radius: 20px;
 }

@@ -19,7 +19,6 @@ audio {
     
 }
 
-
 a {
     text-decoration: none;
     color: inherit;
@@ -48,66 +47,6 @@ a {
     width: 40%;
 }
 
-.pakke {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    margin: 40px auto;
-    top: 50%;
-    left: 43%;
-}
-
-.firkant {
-    width: 100%;
-    height: 70%;
-    background-color: #ff69b4;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.bånd {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 20%;
-    height: 70%;
-    background-color: #8b0000;
-    border-radius: 10px;
-}
-
-.bånd2 {
-    position: absolute;
-    top: -3%;
-    left: 40%;
-    width: 20%;
-    height: 25%;
-    background-color: #8b0000;
-    border-radius: 10px;
-    transform: translateY(-50%);
-}
-
-
-.lokk {
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 22%;
-    background-color: #ff69b4;
-    border-radius: 20px 20px 0 0;
-}
-
-.sløyfe {
-    width: 50%;
-    mix-blend-mode: multiply;
-    position: absolute;
-    top: -50%;
-    left: 12%;
-
-    
-}
 
 .ballonger {
     mix-blend-mode: multiply;

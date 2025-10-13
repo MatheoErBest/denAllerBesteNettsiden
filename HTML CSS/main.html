@@ -4,22 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="stylesheet-main.css">
 </head>
 <body>
+    <!-- Spiller av en bursdag sang da du åpner nettsiden -->
     <audio autoplay>
         <source src="media/celebration.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-    <div class="container"></div>
+    <div class="container">
+
+        <!-- Knapp som sender deg tilbake til index.html -->
         <a href="index.html" id="knapp">
             TILBAKE
         </a>
         <h1>Så bra at du kommer!</h1>
-
         <h2>Her er en takke-pakke</h2>
-        <lable id="knapp">Åpne pakke</label>
 
+        <!-- Lager en input som styrer når pakke animasjonen starter -->
+        <input type="checkbox" id="open-pakke">
+        <label for="open-pakke" class="pakke-knapp">Åpne pakke</label>
+        
+        <!-- Tegner gaven som skal åpnes av bruker etter knappen er trykekt -->
         <div class="pakke">
             <div class="firkant"></div>
             <div class="bånd"></div>

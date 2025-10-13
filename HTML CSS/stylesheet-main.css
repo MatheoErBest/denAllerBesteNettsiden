@@ -1,0 +1,143 @@
+body{
+    text-align: center;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: lightblue;
+}
+
+.container { 
+    border: 5px solid rgb(203, 243, 255);
+    height: 769px;
+    width: 1080px;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+audio {
+    display: none;
+    
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#knapp{
+    
+    background-color: #fffbed;
+    font-size: 50px;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+#knapp:hover {
+    background-color: greenyellow;
+}
+
+/* Lager en velkomstgave til bruker */
+.pakke {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 40px auto;
+    top: 10%;
+}
+
+.firkant {
+    width: 100%;
+    height: 70%;
+    background-color: #ff69b4;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bånd {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20%;
+    height: 70%;
+    background-color: #8b0000;
+    border-radius: 10px;
+}
+
+.bånd2 {
+    position: absolute;
+    top: -3%;
+    left: 40%;
+    width: 20%;
+    height: 25%;
+    background-color: #8b0000;
+    border-radius: 10px;
+    transform: translateY(-50%);
+}
+
+
+.lokk {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 22%;
+    background-color: #ff69b4;
+    border-radius: 20px 20px 0 0;
+}
+
+.sløyfe {
+    width: 50%;
+    mix-blend-mode: multiply;
+    position: absolute;
+    top: -50%;
+    left: 12%;
+}
+
+.pakke-knapp {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background: #f1a;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.pakke-knapp:hover {
+  background: #d08;
+}
+
+#open-pakke {
+  display: none;
+}
+
+/* Aktiverer animasjon for da pakken åpnes */
+#open-pakke:checked ~ .pakke .lokk {
+  animation: open-sesamy 0.5s ease-in-out forwards;
+}
+
+#open-pakke:checked ~ .pakke .sløyfe {
+  animation: open-sesamy 0.5s ease-in-out forwards;
+}
+#open-pakke:checked ~ .pakke .bånd2 {
+    animation: open-sesamy 0.5s ease-in-out forwards;
+}
+
+/* Lager en animasjon for pakke når den åpnes */
+@keyframes open-sesamy {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-50px) rotate(10deg);
+  }
+  100% {
+    opacity: 0;
+  }
+}

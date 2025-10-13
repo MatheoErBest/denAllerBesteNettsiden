@@ -5,12 +5,14 @@ body{
 }
 
 .container { 
+    position: relative;
     border: 5px solid rgb(203, 243, 255);
     height: 769px;
     width: 1080px;
     margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
+    z-index: 999;
 }
 
 audio {
@@ -175,4 +177,98 @@ a {
     opacity: 0;
     z-index: 5;           /* ligger kaken over pakken */
     border-radius: 20px;
+}
+
+/* Lager en Conteiner for hvor ballongene kan være */
+.ballong-container {
+    mix-blend-mode: multiply;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;     /* Hindrer at ballongene kommer utenfor containeren */
+    z-index: 0;           /* Ligger ballongene bak alt annet */
+}
+
+
+.ballong {
+    position: absolute;
+    bottom: -100px;       /* Starter utenfor skjermen */
+    animation: stige 10s linear infinite;
+}
+
+/* Utifra hvor langt nede på listen ballongbildet er vil animasjonen den bli spilt av på et annet sted på skjermen (Fått hjelp av AI) */
+.ballong:nth-child(1) {     /* Den første ballongen i ballong-conteiner */
+    left: 10%;              /* Hvor langt til venstre på skjermen ballongen skal starte */
+    width: 60px;            /* Størrelsen på ballongen */
+    animation-delay: 0s;    /* Delay på når animasjonen skal starte */
+}
+
+.ballong:nth-child(2) {
+    left: 30%;
+    width: 80px;
+    animation-delay: 2s;
+}
+.ballong:nth-child(3) {
+    left: 50%;
+    width: 70px;
+    animation-delay: 4s;
+}
+.ballong:nth-child(4) {
+    left: 70%;
+    width: 90px;
+    animation-delay: 1s;
+}
+.ballong:nth-child(5) {
+    left: 90%;
+    width: 50px;
+    animation-delay: 3s;
+}
+
+.ballong:nth-child(6) {
+    left: 20%;
+    width: 75px;
+    animation-delay: 5s;
+}
+
+.ballong:nth-child(7) {
+    left: 40%;
+    width: 65px;
+    animation-delay: 7s;
+}
+
+.ballong:nth-child(8) {
+    left: 60%;
+    width: 85px;
+    animation-delay: 6s;
+}
+
+.ballong:nth-child(9) {
+    left: 80%;
+    width: 55px;
+    animation-delay: 4s;
+}
+.ballong:nth-child(10) {
+    left: 35%;
+    width: 95px;
+    animation-delay: 8s;
+}
+
+/* Animasjon for hvordan ballongene skal stige*/
+@keyframes stige {
+    0% {
+        bottom: -100px;
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.8;
+    }
+    100% {
+        bottom: 110%;
+        opacity: 0;
+    }
 }

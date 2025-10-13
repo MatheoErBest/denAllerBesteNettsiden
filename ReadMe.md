@@ -18,3 +18,5 @@ Witch laugh.mp3: https://www.youtube.com/watch?v=fpalvmhf180
 bu.mp3: https://www.youtube.com/watch?v=u0D718AmYTs
 
 celebration.mp3: https://www.youtube.com/watch?v=3GwjfUFyY6M
+
+ballong.png: https://www.google.com/url?sa=i&url=https%3A%2F%2Ffestutstyr.no%2Fprodukt%2Fballonger-rod-30-cm-50-stk%2F&psig=AOvVaw02erV25-oYIeZludmlfrPW&ust=1760460059679000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCMD8pfrOoZADFQAAAAAdAAAAABAE

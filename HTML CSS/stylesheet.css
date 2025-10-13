@@ -1,7 +1,9 @@
+/* Lager en container som får alle elementene jeg lager i koden til å ligge på en oversiktlig måte */
 .container {
+    position: relative;
     align-items: center;
     border: 5px solid rgb(203, 243, 255);
-    height: 769px;
+    height: 768px;
     width: 1080px;
     margin-left: auto;
     margin-right: auto;
@@ -14,27 +16,30 @@ body {
 
 }
 
+/* Gjør at det ikke er noe start/stopp synlig på lyd elementene */
 audio {
     display: none;
     
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none; /* Gjør at elementet ikke ser ut som en link*/
     color: inherit;
 }
 
+/* Får de elementene jeg bruker som knapper ser ut som en knapp */
 #knapp{
     background-color: #fffbed;
     font-size: 50px;
-    padding: 20px 40px;
+    padding: 10px 20px;
     border: none;
     border-radius: 12px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin: 20px;
+    cursor: pointer;    /* Musen blir om til peker da du har den over elementene */
+    transition: background-color 0.3s ease; /* Animasjon som gjør at fargen endrer seg mykt */
+    margin: 20px; 
 }
 
+/* Knapp blir grønn da du har musen over */
 #knapp:hover {
     background-color: greenyellow;
 }
@@ -49,41 +54,43 @@ a {
 
 
 .ballonger {
-    mix-blend-mode: multiply;
+    mix-blend-mode: multiply;   /* Gjør at ballongene blander seg med bakgrunnen */
     width: 100%;
     height: 200px;
 }
 
-.dancing {
-    mix-blend-mode: multiply;
-    border-radius: 100%;
-    animation: bounce 3s infinite;
-}
 
+/* Får Dancing-text, gif og pil til å ligge på linje sammen, bevege på seg og blende inn med bakrunden*/
 .gif {
+    position: relative;;
+    height: 100px;
     border-radius: 100%;
 }
 .pil {
-    position: absolute;
-    rotate: 180deg;
+    rotate: 180deg;     /* Roterer pilen 180 grader fordi den peker feil vei */
     width: 100px;
-    animation: bounce 3s infinite;
-    left: 30%;
-    top: 30%;
-
 }
 
 .dancing-text {
-    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
     color: black;
-    top: 30%;
-    left: 5%;
-   
 }
 
-@keyframes bounce {
+/* Styler dancing conteineren sånn at alle elementene ligger på en linje sammen */
 
-    0%, 100% {transform: translateX(-5%); }
-    50% { transform: translateX(42%); }
+.dancing {      /*Deler er AI generert*/
+    mix-blend-mode: multiply;
+    display: flex;
+    align-items: center;      
+    justify-content: center;  
+    gap: 20px;                
+    margin-top: 20px;
+    animation: slide 5s infinite;
+}
 
+/* Lager en animasjon som får elementene til å skli frem og tilbake på skjermen*/
+@keyframes slide {
+    0%, 100% {transform: translateX(-20%); }
+    50% { transform: translateX(20%); }
 }

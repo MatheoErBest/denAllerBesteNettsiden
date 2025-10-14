@@ -11,7 +11,7 @@
 
 body {
     text-align: center;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     background-color: lightblue;
 
 }
@@ -29,10 +29,11 @@ a {
 
 /* Får de elementene jeg bruker som knapper ser ut som en knapp */
 #knapp{
-    background-color: #fffbed;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 50px;
     padding: 10px 20px;
-    border: none;
+    border: 5px solid black;
     border-radius: 12px;
     cursor: pointer;    /* Musen blir om til peker da du har den over elementene */
     transition: background-color 0.3s ease; /* Animasjon som gjør at fargen endrer seg mykt */
@@ -45,8 +46,8 @@ a {
 }
 
 #tekst-box1 {
-    background-color: #fffbed;
-    padding: 20px;
+
+    padding: 10px;
     border-radius: 12px;
     margin: 20px auto;
     width: 40%;
